@@ -6,19 +6,18 @@ body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .container{
 	max-width: 1200px;
 	width: 90%;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -29,7 +28,7 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
+/*h1 {
 	font-size: 30px;
 }
 h2 {
@@ -40,10 +39,10 @@ h3 {
 }
 h4 {
 	font-size: 12px;
-}
+}*/
 
 p {
-	font-size: 14px;
+	font-size: 0.875em;
 	line-height: 21px;
     /*padding: 0 30px;*/
 }
@@ -51,19 +50,21 @@ p {
 /*The widths are in a percentage!*/
 header {
 	/*height: 110px;*/
-	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 header h1 {
 	/*float: left;*/
+	width:100%;
 	margin: 0;
 	padding: 38px 0 5px 0;
 	border-bottom: 2px solid #77a466;
+	text-align: center;
+	font-size: 1.87em;
 }
 header h1 span {
 	color: #77a466;
@@ -80,15 +81,15 @@ header nav ul {
                                       ``
 }
 header nav ul li {
-	text-transform: uppercase;
+  text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: .875em;
 	/*padding: 0 10px;
 	display: inline;*/
 	display:flex;
-	align-items: flex-start;
+	/*align-items: flex-start;*/
 	justify-content: center;
-			padding: 0 0 25px 0;
+  padding: 0 0 25px 0;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -98,12 +99,12 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-margin: 0 auto;
+/*margin: 0 auto;
 	/*clear: both;*/
 	display: flex;
-justify-content: flex-start;
-align-items: center;
-flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .main-image {
@@ -123,10 +124,11 @@ flex-flow: row wrap;
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
+	font-size: 1.25em;
 }
 .main-title p {
 	padding: 0;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 25px;
 }
 
@@ -134,11 +136,9 @@ flex-flow: row wrap;
 .section-two,
 .section-three {
 /*	width: 33%;*/
-	height: auto;
-	/*float: left;*/
-	/*justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;*/
+/*	height: auto;*/
+	border-top: 1px solid #eee;
+	width:100%;
 }
 
 /*.section-one h4 {
@@ -166,20 +166,20 @@ flex-flow: row wrap;
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3135;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
 footer {
 	/*height: 50px;*/
 	border-top: 3px solid #eee;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	/*clear: both;*/
 	text-align: center;
 	display: flex;
@@ -191,5 +191,62 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: .875em;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+		.bottom-section {
+		  border-top: 1px solid black;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.section-one, .section-two, .section-three {
+			border-top: none;
+			flex-basis: 30%;
+		}
+
+		.section-two {
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			padding: 0 20px;
+		}
+
+		.section-three {
+
+		}
+
+		.section-two h4, p,
+		.section-three h4, p {
+			padding: 10px 30px;
+		}
+
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+		header {
+			justify-content: space-between;
+			width:100%;
+		}
+
+		header nav {
+			width: 40%;
+		}
+
+	   header nav ul {
+			 display:flex;
+			 justify-content: space-between;
+	   }
+
+		 header nav ul li a {
+		 }
+
+		 header h1 {
+			 width: 30%;
+			 padding: 0;
+			 border-bottom: none;
+			 text-align: left;
+		 }
 }
