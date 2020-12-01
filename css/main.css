@@ -197,7 +197,7 @@ footer span {
 @media all and (min-width:768px) {
     /* Tablet styles here */
 		.bottom-section {
-		  border-top: 1px solid black;
+		  border-top: 1px solid #eee;
 			justify-content: space-between;
 			align-items: flex-start;
 		}
@@ -208,8 +208,8 @@ footer span {
 		}
 
 		.section-two {
-			border-left: 1px solid black;
-			border-right: 1px solid black;
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
 			padding: 0 20px;
 		}
 
@@ -219,7 +219,7 @@ footer span {
 
 		.section-two h4, p,
 		.section-three h4, p {
-			padding: 10px 30px;
+	
 		}
 
 }
